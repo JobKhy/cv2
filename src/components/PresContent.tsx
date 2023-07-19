@@ -5,8 +5,6 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 
 
-type Props = {}
-
 const Container = styled.div`
     position: relative;
     display: flex;
@@ -128,7 +126,7 @@ const Finger = styled.div`
         }
 `
 
-const PresContent = (props: Props) => {
+const PresContent = () => {
   return (
     <Container id='home'>
         <Left>

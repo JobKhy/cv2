@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { skills } from '@/data'
 
-type Props = {}
-
 const Container = styled.div`
     position: relative;
     display: flex;
@@ -70,7 +68,7 @@ const Skill = styled.div`
 
 
 
-const AboutSkills = (props: Props) => {
+const AboutSkills = () => {
 
   return (
     <Container id='about'>

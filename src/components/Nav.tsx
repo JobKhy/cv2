@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import { section } from '@/data'
 import { styled } from 'styled-components'
 
-type Props = {}
 
 const Container = styled.div`
     position: relative;
@@ -91,7 +89,7 @@ const Sections = styled.div`
 `
 
 
-const Nav = (props: Props) => {
+const Nav = () => {
 
     const darkMode = () => {
         document.querySelector('body')?.setAttribute('data-theme', 'dark')

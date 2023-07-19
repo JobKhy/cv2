@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { contact, stack } from '@/data'
 
-type Props = {}
-
 const Container = styled.div`
     position: relative;
     display: flex;
@@ -98,7 +96,7 @@ const Stack = styled.div`
 `
 
 
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <Container id='contact'>
         <Left>

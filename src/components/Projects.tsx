@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import ProjectCard from './ProjectCard'
 
 
-type Props = {}
-
 const Container = styled.div`
     position: relative;
     display: flex;
@@ -22,8 +20,7 @@ const Title = styled.div`
     -webkit-text-fill-color: transparent;
 `
 
-const Projects = (props: Props) => {
-
+const Projects = () => {
     return (
         <Container id='projects'>
             <Title>Projects</Title>
