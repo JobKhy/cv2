@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --white: #fff;
+  --text: #050505;
+  --background: #fafafa;
+  --primary: #597042;
+  --secondary: #efefdc;
+  --accent: #768980;
+  --accent-light: #7689801e;
+  --bg: #ffffffe9;
+
+  /* color: rgba(255, 255, 255, 0.w87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* background-image: url(./assets/img/bg.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* background-position: center; */
+
+  display: flexbox;
+  
+  scroll-snap-type: y;
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--accent-light);
+    border-radius: 1.3vw;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 1vw;
+  }
+
+  transition: all .3s ease-in-out;
+
+
+  [data-theme="dark"]{
+    transition: all .2s ease;
+
+    --white: #000000;
+    --text: #fff;
+    --background: #000000;
+    --primary: #9dc674;
+    --secondary: #efefdc;
+    --accent: #a7c1b5;
+    --accent-light: #768980;
+    --bg: #000000b0;
+
+    color: var(--text);
+    background-color: var(--background);
+  }
+
+  [data-theme="light"]{
+    transition: all 1s ease;
+  } 
+
+}
+
+.Card{
+  position: relative;
+    display: flex;
+    height: 32%;
+    width: 33%;
+    background-color: var(--bg);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+
+}
+
+.hovCard{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 0%;
+  width: 0%;
+  top: 50%;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, .78);
+  animation: dow;
+  color: white;
+}
+
+.hovCard p, .hovCard div {
+  visibility: hidden;
+}
+
+.Card:hover .hovCard {
+  
+  visibility: visible;
+  transition: all .3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: 0;
+}
+
+.Card:hover .hovCard p, .Card:hover .hovCard div {
+  visibility: visible;
+  transition: all .3s ease-in-out;
+}
+
+.tecs{
+  position: relative;
+  display: flex;
+  left: 2rem;
+  bottom: 0;
+}
+
+.Card:hover .tecs{
+  bottom: 0;
+  display: flex;
+  height: 2rem;
+}
