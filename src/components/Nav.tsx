@@ -35,6 +35,14 @@ const Left = styled.div`
     :hover {
         cursor: default;
     }
+
+    @media (max-width: 980px) {
+        left: 2rem;
+
+        h2 {
+            font-size: 1rem;
+        }
+    }
 `
 
 const Right = styled.div`
@@ -43,15 +51,20 @@ const Right = styled.div`
     gap: 2rem;
     display: inline-flex;
     justify-content: normal;
-    padding-right: 5rem;
+    padding-right: 1rem;
+
+    @media (max-width: 980px) {
+        gap: 4rem;
+        margin-right: 0;
+    }
+
 `
 const Sections = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 20vw;        
-    
+    width: 20vw;      
     div {
         padding: 0 .2rem;
         border-radius: 0.5rem;
@@ -119,7 +132,7 @@ const Nav = () => {
             <Sections>
                 {section.map((item, index) => (
                     <div key={index}>
-                        <a href={item.link}>
+                        <a href={item.link} className={item?.display}>
                         {item.name}
                         </a>
                     </div>

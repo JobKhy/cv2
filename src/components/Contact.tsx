@@ -15,6 +15,9 @@ const Left = styled.div`
     width: 49.5vw;
     margin-left: 5vw;
     // background-color: #b5b5b5;
+    @media (max-width: 980px) {
+        width: 100vw;
+    }
 `
 const Title = styled.div`
     font-size: 3rem;
@@ -38,6 +41,11 @@ const Row = styled.div`
     flex-direction: row;
     gap: 1rem;
     align-items: end;
+
+    @media (max-width: 980px) {
+        align-items: start;
+        flex-direction: column;
+    }
 
     div{
         text-decoration: none;  
@@ -77,6 +85,10 @@ const Right = styled.div`
     width: 49.5vw;
     self-align: center;
     justify-content: center;
+
+    @media (max-width: 980px) {
+        display: none;
+    }
 `
 const Center = styled.div`
     position: relative;

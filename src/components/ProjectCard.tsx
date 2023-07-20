@@ -27,6 +27,7 @@ const DescriptionP = styled.p`
     font-weight: lighter;
     font-size: 1rem;
     min-width: 200px;
+
     overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;

@@ -4,19 +4,23 @@ import cv from '../assets/img/cv.jpg'
 export const section = [
     {
         name: 'Home',
-        link: '#home'
+        link: '#home',
+        display: ""
     },
     {
         name: 'Projects',
-        link: '#projects'
+        link: '#projects',
+        display: "Resp"
     },
     {
         name: 'Contact',
-        link: '#contact'
+        link: '#contact',
+        display: ""
     },
     {
         name: 'About & skills',
-        link: '#about'
+        link: '#about',
+        display: "Resp"
     },
 ]
 

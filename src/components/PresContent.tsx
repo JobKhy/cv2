@@ -28,6 +28,10 @@ const Left = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    @media (max-width: 980px) {
+        width: 100%;
+    }
     
 `
 const Right = styled.div`
@@ -39,6 +43,14 @@ const Right = styled.div`
     height: 100%;
     padding-top: 8vh;
     justify-content: center;
+
+    @media (max-width: 980px) {
+        position: absolute;
+        visibility: hidden;
+        z-index: -1;
+        width: 100vw;
+    }
+
     img {
         position: absolute;
         object-fit: contain;
@@ -58,10 +70,17 @@ const Right = styled.div`
             transform: translatey(-4px);
         }
     }
+
+    @media (max-width: 980px) {
+        .sphere{
+            display: flex;
+            visibility: visible;
+        }
+    }
 `
 const More = styled.div`
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     align-self: flex-end;
@@ -132,7 +151,7 @@ const PresContent = () => {
         <Left>
             <span className="text-[40px] font-normal">Hi! 👋<br/>My name is </span>
             <span className="Deg text-[40px] font-normal">Job</span>
-            <div className="w-[492px] left-[35px] top-[162px] text-opacity-70 text-lg font-light">
+            <div className="w-[492px] left-[35px] top-[162px] text-opacity-70 text-lg font-light max-w-[100%]">
                     Junior FrontEnd developer and Scrum Master who wants to improve his knowledges and gain work experience
                 </div>
         </Left>
@@ -144,7 +163,7 @@ const PresContent = () => {
             >👇</Finger>
         </More>
         <Right>
-            <Canvas>
+            <Canvas className='sphere'>
                 <Suspense fallback={null}>
                 <OrbitControls enableZoom={false} />
                 <ambientLight intensity={.45} />

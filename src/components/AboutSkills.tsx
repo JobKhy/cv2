@@ -7,6 +7,11 @@ const Container = styled.div`
     align-items: center;
     width: 100dw;
     height: 100vh;
+
+    @media (max-width: 980px) {
+        flex-direction: column;
+        height: 100%;
+    }
 `
 const Left = styled.div`
     position: relative;
@@ -15,14 +20,24 @@ const Left = styled.div`
     // max-height: 90vh;
     width: 49.5vw;
     self-align: center;
+
+    @media (max-width: 980px) {
+        width: 100%;
+        margin-top: 5rem;
+    }
 `
-const Title = styled.div`
+const Title = styled.h2`
     font-size: 3rem;
     font-weight: 500;
     background: linear-gradient( 100deg, var(--primary), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+
+    @media (max-width: 980px) {
+        font-size: 2rem;
+    }
+
 `
 const Info = styled.div`
     font-size: 1.2rem;
@@ -31,11 +46,19 @@ const Info = styled.div`
     max-width: 70%;
     text-align: justify;
     margin: auto;
+
+    @media (max-width: 980px) {
+        max-width: 90%;
+    }
 `
 const Separator = styled.img`
     position: relative;
     display: flex;
     width: 1vw;
+
+    @media (max-width: 980px) {
+        display: none;
+    }
 `
 const Right = styled.div`
     position: relative;
@@ -43,6 +66,9 @@ const Right = styled.div`
     width: 49.5vw;
     self-align: center;
     justify-content: center;
+    @media (max-width: 980px) {
+        width: 100%;
+    }
 `
 const Grid = styled.div`
     position: relative;
@@ -55,6 +81,14 @@ const Grid = styled.div`
 
     gap: 2rem;
     padding: 5rem;
+
+    @media (max-width: 980px) {
+        margin-top: 2rem;
+        width: 100%;
+        padding: 0;
+
+    }
+
 `
 const Skill = styled.div`
     position: relative;
@@ -64,6 +98,12 @@ const Skill = styled.div`
     justify-content: left;
     width: 180px;
     gap: 1rem;
+
+    @media (max-width: 980px) {
+        width: 40%;
+        justify-content: center;
+    }
+
 `
 
 
