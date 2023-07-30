@@ -77,7 +77,8 @@
 }
 
 body{
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: scroll;
   @media screen and (max-width: 580px) {
     overflow-y: scroll;
     

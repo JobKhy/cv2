@@ -18,8 +18,8 @@ const Left = styled.div`
     position: relative;
     display: column;
     align-items: baseline;
-    width: 45vw;  
-    padding-left: 10vw;
+    width: 45%;  
+    padding-left: 8vw;
     self-align: center;
 
     .Deg {
@@ -29,8 +29,11 @@ const Left = styled.div`
         -webkit-text-fill-color: transparent;
     }
 
-    @media (max-width: 980px) {
-        width: 100%;
+    @media (max-width: 780px) {
+        position: relative;
+        justify-self: center;
+        padding-left: 0;
+        margin: 0 auto;
     }
     
 `
@@ -39,16 +42,17 @@ const Right = styled.div`
     display: flex;
     flex: 2;
     align-items: center;
-    width: 45vw;
+    width: 45%;
     height: 100%;
     padding-top: 8vh;
     justify-content: center;
 
     @media (max-width: 980px) {
         position: absolute;
+        left: 0;
         visibility: hidden;
         z-index: -1;
-        width: 100vw;
+        width: 100%;
     }
 
     img {
@@ -80,11 +84,10 @@ const Right = styled.div`
 `
 const More = styled.div`
     position: relative;
-    display: none;
     flex-direction: column;
     align-items: center;
     align-self: flex-end;
-    width: 10vw;
+    width: 10%;
     text-transform: uppercase;
     transition: 0.3s;
     gap: 10px;
@@ -115,9 +118,15 @@ const More = styled.div`
 
     }
 
+    a{
+        transition: all 0.3s ease;
+    }
+
     a:hover {
         opacity: 100%;
         font-weight: 400;
+        transition: all 0.1s ease;
+        padding: 0 2px;
     }
 
     a:hover::before {
@@ -127,8 +136,15 @@ const More = styled.div`
         transition: all 0.3s ease;
       }
 
+    @media (max-width: 980px) {
+        position: absolute;
+        width: 18vw;
+        left: 45%;
+    }
 `
-const Finger = styled.div`
+const Finger = styled.p`
+
+    padding-top: 10px;
     opacity: 70%;
 
     animation: movi 5s ease-in-out infinite;
@@ -149,9 +165,9 @@ const PresContent = () => {
   return (
     <Container id='home'>
         <Left>
-            <span className="text-[40px] font-normal">Hi! 👋<br/>My name is </span>
+        <span className="text-[40px] font-normal">Hi! 👋<br/>My name is </span>
             <span className="Deg text-[40px] font-normal">Job</span>
-            <div className="w-[492px] left-[35px] top-[162px] text-opacity-70 text-lg font-light max-w-[100%]">
+            <div className="w-[492px] m-0 text-lg font-light max-w-[100%]">
                     Junior FrontEnd developer and Scrum Master who wants to improve his knowledges and gain work experience
                 </div>
         </Left>
@@ -159,7 +175,7 @@ const PresContent = () => {
             <a href='#projects'
             >Take a look at my projects</a>
             <Finger 
-            className="w-[58px] text-center text-3xl font-light floatAn"
+            className=" text-center text-3xl"
             >👇</Finger>
         </More>
         <Right>

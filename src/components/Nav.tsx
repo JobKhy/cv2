@@ -22,7 +22,7 @@ const Left = styled.div`
     position: absolute;
     display: flex;
     align-items: baseline;
-    left: 5rem;
+    left: 8vw;
     gap: 4px;
     h2 {
         font-size: 1.4rem;
@@ -100,8 +100,6 @@ const Sections = styled.div`
     }
     
 `
-
-
 const Nav = () => {
 
     const darkMode = () => {
@@ -124,7 +122,7 @@ const Nav = () => {
 
   return (
     <Container>
-        <Left className='relative self-center'>
+        <Left >
             <h2> Job Martinez </h2> 
         </Left>
         

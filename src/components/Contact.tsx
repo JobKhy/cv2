@@ -133,23 +133,23 @@ const Contact = () => {
 
         </Info>
         </Left>
-    <Right>
-        <Title className='text-center'>
-            Main stack
-        </Title>
-        <Center>
-        <div className='flex flex-col gap-8'>
-        {stack.map((skill, index) => (
-            <Stack key={index}>
-                <img src={skill.icon} className="min-h-0 min-w-0 w-[2rem] shrink-0" />
-                <p className="  font-light tracking-[3.2] leading-[32px] shrink-0 h-full">
-                    {skill.name}
-                </p>
-            </Stack>
-        ))}
-        </div>
-        </Center>
-    </Right>
+        <Right>
+            <Title className='text-center'>
+                Main stack
+            </Title>
+            <Center>
+            <div className='flex flex-col gap-8'>
+            {stack.map((skill, index) => (
+                <Stack key={index}>
+                    <img src={skill.icon} className="min-h-0 min-w-0 w-[2rem] shrink-0" />
+                    <p className="  font-light tracking-[3.2] leading-[32px] shrink-0 h-full">
+                        {skill.name}
+                    </p>
+                </Stack>
+            ))}
+            </div>
+            </Center>
+        </Right>
     </Container>
   )
 }

@@ -106,8 +106,6 @@ const Skill = styled.div`
 
 `
 
-
-
 const AboutSkills = () => {
 
   return (
